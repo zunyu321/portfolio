@@ -105,8 +105,9 @@
       <span>独立完成</span><span>Ollama / llama.cpp / 模型量化 / OpenAI 兼容接口</span><span>2025.03 – 2025.06</span>
     </p>
     <ul>
-      <li><b>算力受限：</b>直接加载大模型即显存溢出，遂逐档下调量化，在速度与显存之间取可长时间稳定的配置，先保证跑起来再谈效果；</li>
-      <li><b>回答失准：</b>模型面对本地资料常张冠李戴，补一层文档检索取回相关片段再交模型作答；以 OpenAI 兼容接口封装服务，上层换地址即可接入，全程离线、数据不出本机。</li>
+      <li><b>算力受限：</b>直接加载 8B 模型即显存溢出，逐档下调量化并限制上下文，取能稳定连跑的一档，先跑通再谈效果；</li>
+      <li><b>回答失准：</b>本地资料常被张冠李戴，补一层文档切分与检索，命中片段拼进上下文再作答，明显减少胡编；</li>
+      <li><b>服务化与隔离：</b>以 OpenAI 兼容接口封装成服务，上层换地址即可接入；全程离线、数据不出本机。</li>
     </ul>
   </div>
 
@@ -119,9 +120,9 @@
       <span>独立开发</span><span>C# / .NET / CUE4Parse / glTF</span><span>2026.10</span>
     </p>
     <ul>
-      <li><b>解密失败：</b>官方 CUE4Parse 读不了该游戏的自定义 AES 变体，改用社区维护分支后成功解开 pak，导出流程方得推进；</li>
-      <li><b>数据对不齐：</b>导出动画与原游戏有偏差，写脚本逐骨骼比对，把误差收敛到 2° 以内；无骨架的头饰道具改按件配挂点；</li>
-      <li><b>材质叠层缺贴图</b>短期无解，标记为已知问题并归档，不再持续投入。</li>
+      <li><b>解密失败：</b>官方 CUE4Parse 读不了该游戏的自定义 AES 变体，改用社区维护分支后成功解开 pak，流程方得推进；</li>
+      <li><b>数据对不齐：</b>导出动画与原游戏有偏差，写脚本逐骨骼比对，误差收敛到 2° 以内；无骨架配件按件配挂点；</li>
+      <li><b>规模化与边界：</b>累计导出 46 个 glb、345 张贴图、35 段动作，按虚拟路径还原目录结构；材质叠层缺贴图短期无解，标记归档不再投入。</li>
     </ul>
   </div>
 
@@ -131,19 +132,20 @@
       <a data-code="projects/ai-workflow" href="projects/ai-workflow/README.md">流程与沉淀 ↗</a>
     </div>
     <p class="meta">
-      <span>日常实践</span><span>DeepSeek Harness / AI 编码工具 / 自动化脚本</span><span>2026.10 – 至今</span>
+      <span>日常实践</span><span>DeepSeek Harness / AI 编码工具 / PowerShell 自动化</span><span>2026.10 – 至今</span>
     </p>
     <ul>
-      <li><b>返工偏多：</b>初期整段投喂需求，产出可用性低、返工频繁，改为先拆需求、写明验收标准再按模块交付，验收与串联自留；</li>
-      <li><b>提问效率：</b>调试受阻时先用日志与最小复现缩小范围再问，常用提示词与技能模板沉淀复用，迭代速度明显提升。</li>
+      <li><b>返工偏多：</b>初期整段投喂需求，产出可用性低，改为先拆需求、写明验收标准再按模块交付，验收与串联自留；</li>
+      <li><b>效率沉淀：</b>常用提示词与技能模板固化成可复用资产，配 PowerShell 脚本与计划任务托管重复操作；</li>
+      <li><b>可验证交付：</b>为关键逻辑补最小测试用例（如定时任务的纯函数测例），验收不只靠肉眼。</li>
     </ul>
   </div>
 
   <h2>技能</h2>
   <div class="skills">
-    <div class="skill-row"><b>AI-Native 研发闭环</b>熟悉 AI Coding 工具链（Qoder、DeepSeek Harness、Claude Code 等）的需求拆解、Spec 与 Skills 沉淀和原型交付，理解主流模型（DeepSeek / OpenAI 兼容）的能力边界与选型。</div>
-    <div class="skill-row"><b>开发与调试</b>借助 AI 完成 Python / C# / JavaScript 的桌面与工具类项目实现，会用 VS Code、Visual Studio、Postman、Git 做调试与版本管理。</div>
-    <div class="skill-row"><b>工程交付</b>Windows 下打包发布、自动化脚本与测试用例，能独立把原型推到可运行、可发版的状态。</div>
+    <div class="skill-row"><b>AI-Native 研发闭环</b>熟悉 Qoder / DeepSeek Harness / Claude Code 等 AI Coding 工具链，能做需求拆解、Spec 与 Skills 沉淀和原型交付；理解主流模型（DeepSeek / OpenAI 兼容）的取舍。</div>
+    <div class="skill-row"><b>开发与调试</b>借助 AI 完成 Python / C# / JavaScript 的桌面与工具类项目，熟悉 Ollama / llama.cpp 本地部署；会用 VS Code、Visual Studio、Postman、Git。</div>
+    <div class="skill-row"><b>工程交付</b>Windows 下打包发布、PowerShell 自动化脚本与测试用例，能独立把原型推到可运行、可发版的状态。</div>
   </div>
 
   <footer>
